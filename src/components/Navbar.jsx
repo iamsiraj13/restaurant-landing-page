@@ -135,13 +135,14 @@ function Navbar() {
         <div className="md:hidden bg-rred z-50">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {menus?.map((menu, index) => (
-              <a
+              <Link
                 key={index}
-                href={menu?.url}
-                className="block text-white   px-3 py-2 rounded-md"
+                onClick={() => scrollToSection(menu?.id)}
+                to="/"
+                className="block text-white capitalize  px-3 py-2 rounded-md"
               >
                 {menu?.title}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
