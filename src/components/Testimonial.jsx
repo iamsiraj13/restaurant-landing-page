@@ -81,9 +81,9 @@ const Testimonial = () => {
           {[1, 2, 3, 4, 5].map((item, index) => (
             <div
               key={index}
-              className="flex flex-col md:flex-row w-full h-[555px]"
+              className="flex flex-col md:flex-row w-full lg:h-[555px]"
             >
-              <div className="order-2 lg:order-1 w-full  md:w-2/5 h-[335px] lg:h-full bg-primary p-[25px] md:px-[58px] md:py-[70px] flex flex-col justify-between relative">
+              <div className="order-2 lg:order-1 w-full  md:w-2/5 h-full lg:h-full bg-primary p-[25px] md:px-[58px] md:py-[70px] flex flex-col justify-between relative">
                 {/* flower slice  */}
                 <div className="absolute left-0 bottom-0 lg:bottom-[40px]">
                   <img
