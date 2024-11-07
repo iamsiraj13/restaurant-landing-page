@@ -1,10 +1,8 @@
 # Restaurant Responsive Tmplate
 
-A brief description of what this project does and who it's for
+# Live Demo
 
-# LIve Demo
-
-## https://restaurant-landing-page-murex-nine.vercel.app/
+## [Visit to click here](https://restaurant-landing-page-murex-nine.vercel.app/)
 
 ## Technology Used
 
