@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "react-tabs/style/react-tabs.css";
 import Button from "./Button";
 import { PiPhoneCallDuotone } from "react-icons/pi";
 

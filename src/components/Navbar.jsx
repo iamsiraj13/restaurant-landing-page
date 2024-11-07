@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import logo from "../assets/logo.png";
 import Button from "../ui/Button";
 import { Link } from "react-router-dom";
-import ScrollSpy from "react-ui-scrollspy";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
