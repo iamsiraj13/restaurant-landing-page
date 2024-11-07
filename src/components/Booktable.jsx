@@ -36,7 +36,7 @@ const Booktable = () => {
                   placeholder="Reservation Date *"
                 />
                 <input
-                  className="border border-white px-4 py-2 bg-transparent font-roboto text-[14px] text-white placeholder:text-[14px] placeholder:text-white focus:outline-none"
+                  className="w-full border border-white px-4 py-2 bg-transparent font-roboto text-[14px] text-white placeholder:text-[14px] placeholder:text-white focus:outline-none"
                   type="number"
                   placeholder="Total People"
                 />

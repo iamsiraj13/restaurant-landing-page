@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <div className="hero__section w-full  pt-[70px]" id="hero">
       <div className="container w-full  pt-[230px] lg:pt-[130px]  pb-[32px]  flex flex-col md:flex-row  items-center">
-        <div className="hero__content mb-[200px] w-full flex items-center relative">
+        <div className="hero__content mb-[230px] w-full flex items-center relative">
           {/* offer */}
           <div className="hidden lg:block absolute bottom-0 -right-14">
             <img src={offer} alt="offer" />
