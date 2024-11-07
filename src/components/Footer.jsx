@@ -8,7 +8,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <div className="footer w-full py-[32px] md:py-[120px]">
+    <div className="footer w-full py-[32px] md:py-[120px]" id="contact">
       <div className="container">
         {/* section title  */}
         <div className="text-center">
@@ -16,7 +16,7 @@ const Footer = () => {
             We ready to have you the best dining experiences
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mb-[120px] gap-y-[24px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mb-[60px] lg:mb-[120px] gap-y-[24px]">
           {/* box  */}
           <div className="w-full text-white text-center mb-[32px] md:mb-0">
             <span className="inline-block font-bold text-primary text-4xl text-center">

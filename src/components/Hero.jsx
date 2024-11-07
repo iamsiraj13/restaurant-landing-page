@@ -3,11 +3,13 @@ import Button from "../ui/Button";
 import offer from "../assets/hero/offer.png";
 import star from "../assets/hero/star.png";
 import hero from "../assets/hero/hero.png";
+import offersm from "../assets/hero/offer-sm.png";
+import fullsm from "../assets/hero/fullsm.png";
 
 const Hero = () => {
   return (
-    <div className="hero__section w-full  pt-[70px]    ">
-      <div className="container w-full  pt-[230px]  pb-[32px] md:pb-[160px] flex flex-col md:flex-row  items-center">
+    <div className="hero__section w-full  pt-[70px]" id="hero">
+      <div className="container w-full  pt-[230px] lg:pt-[130px]  pb-[32px]  flex flex-col md:flex-row  items-center">
         <div className="hero__content mb-[200px] w-full flex items-center relative">
           {/* offer */}
           <div className="hidden lg:block absolute bottom-0 -right-14">
@@ -29,8 +31,14 @@ const Hero = () => {
             <Button>explore menu</Button>
           </div>
         </div>
-        <div className="block md:hidden">
-          <img src={hero} alt="hero" className="w-full" />
+        <div className="block md:hidden relative">
+          <div className="absolute bottom-[12px] right-[15px]">
+            <img src={offersm} alt="" />
+          </div>
+          <div className="absolute -top-6 right-0 z-[1]">
+            <img src={fullsm} alt="" />
+          </div>
+          <img src={hero} alt="hero" className="w-full z-[10]" />
         </div>
       </div>
     </div>

@@ -4,7 +4,10 @@ import Button from "../ui/Button";
 
 const Booktable = () => {
   return (
-    <div className="book__table pt-[120px] pb-[86px]">
+    <div
+      className="book__table py-[30px] lg:pt-[120px] lg:pb-[86px]"
+      id="table"
+    >
       <div className="container">
         <div className="w-full md:w-1/2">
           <div>

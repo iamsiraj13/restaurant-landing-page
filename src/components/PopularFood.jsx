@@ -15,13 +15,18 @@ const responsive = {
     items: 4,
     slidesToSlide: 3, // optional, default to 1.
   },
-  tablet: {
+  laptop: {
     breakpoint: { max: 1024, min: 464 },
     items: 4,
     slidesToSlide: 2, // optional, default to 1.
   },
+  tablet: {
+    breakpoint: { max: 1023, min: 601 },
+    items: 2,
+    slidesToSlide: 2, // optional, default to 1.
+  },
   mobile: {
-    breakpoint: { max: 464, min: 0 },
+    breakpoint: { max: 600, min: 0 },
     items: 1,
     slidesToSlide: 1, // optional, default to 1.
   },
@@ -52,19 +57,21 @@ const slideData = [
 
 const ButtonGroup = ({ next, previous }) => {
   return (
-    <div className="flex justify-between items-center mb-[60px]">
+    <div
+      className="flex justify-between items-center mb-[30px] lg:mb-[60px]"
+      id="popular"
+    >
       <Title title="popular food items" subtitle="Crispy, Every Bite Taste" />
-      <div className="  flex items-center  gap-[32px]">
-        {/* className="absolute -top-[120px]  right-8 flex items-center transform   mb-[60px] gap-[32px]" */}
+      <div className="flex items-center  gap-[32px] absolute md:static bottom-[-65px] left-[50%] -translate-x-[50%] lg:-translate-x-1">
         <button
           onClick={() => previous()}
-          className="w-[60px] h-[60px] flex justify-center items-center bg-white  shadow-md rounded-full text-[24px] hover:text-rred"
+          className="w-[40px] lg:w-[60px] h-[40px] lg:h-[60px] flex justify-center items-center bg-white  shadow-md rounded-full text-[24px] hover:text-rred"
         >
           <FiChevronLeft />
         </button>
         <button
           onClick={() => next()}
-          className="w-[60px] h-[60px] flex justify-center items-center bg-white  shadow-md rounded-full text-[24px] hover:text-rred"
+          className="w-[40px] lg:w-[60px] h-[40px] lg:h-[60px] flex justify-center items-center bg-white  shadow-md rounded-full text-[24px] hover:text-rred"
         >
           <FiChevronRight />
         </button>
@@ -74,7 +81,7 @@ const ButtonGroup = ({ next, previous }) => {
 };
 const PopularFood = () => {
   return (
-    <div className=" bg-[#FBF7F2] pb-[120px] pt-[120px] relative">
+    <div className=" bg-[#FBF7F2] pt-[32px] pb-[100px] lg:pb-[120px] lg:pt-[120px] relative">
       <div className="hidden md:block absolute left-0 top-1/3">
         <img src={foodShape} alt="" />
       </div>

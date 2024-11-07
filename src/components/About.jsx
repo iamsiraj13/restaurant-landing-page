@@ -5,9 +5,13 @@ import one from "../assets/about/1.png";
 import two from "../assets/about/2.png";
 import three from "../assets/about/3.png";
 import abutil from "../assets/about/about1.png";
+
 const About = () => {
   return (
-    <div className="w-full bg-white py-[32px] lg:py-[120px] relative">
+    <div
+      className="w-full bg-white py-[32px] lg:py-[120px] relative"
+      id="about"
+    >
       <div className="hidden lg:block absolute right-0 bottom-14">
         <img src={abutil} alt="abutil" />
       </div>
@@ -30,7 +34,7 @@ const About = () => {
               <img src={one} alt="one" />
             </div>
             <div>
-              <h3 className="font-bebas font-[500] text-rblack text-[30px]">
+              <h3 className="font-bebas font-[500] text-rblack text-[24px] md:text-[30px]">
                 fast delivery
               </h3>
               <p className="font-inter text-rblack text-[20px]">

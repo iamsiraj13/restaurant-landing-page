@@ -2,16 +2,19 @@ import React, { useEffect, useState } from "react";
 import logo from "../assets/logo.png";
 import Button from "../ui/Button";
 import { Link } from "react-router-dom";
+import ScrollSpy from "react-ui-scrollspy";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menus = [
     {
+      id: "hero",
       url: "/",
       title: "Home",
     },
     {
-      url: "/",
+      id: "about",
+      url: "about",
       title: "About",
     },
     {
@@ -27,6 +30,7 @@ function Navbar() {
       title: "blog",
     },
     {
+      id: "contact",
       url: "/",
       title: "contact",
     },
@@ -51,6 +55,19 @@ function Navbar() {
       setSticky(false);
     }
   };
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  //Function to smoothly scroll to a section by its ID
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      //Adjust the margin Top value as needed
+      const marginTop = 0;
+      const scrollToY =
+        element.getBoundingClientRect().top + window.scrollY - marginTop;
+      window.scrollTo({ top: scrollToY, behavior: "smooth" });
+    }
+  };
 
   return (
     <nav
@@ -68,8 +85,10 @@ function Navbar() {
             <div className="hidden md:flex space-x-[40px] ml-[60px]">
               {menus?.map((menu, index) => (
                 <Link
+                  onClick={() => scrollToSection(menu?.id)}
                   key={index}
-                  to={menu?.url}
+                  to="#about"
+                  data-to-scrollspy-id="about"
                   className="font-medium capitalize text-[15px] text-white"
                 >
                   {menu?.title}
@@ -83,7 +102,7 @@ function Navbar() {
             <div className="hidden md:block ">
               <Button>Book a table</Button>
             </div>
-            <div className="md:hidden">
+            <div className="md:hidden" onClick={() => scrollToSection("table")}>
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="text-white   focus:outline-none"
